@@ -2,91 +2,168 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mídias do Funil - Mounjax</title>
 <style>
-body {
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: #eee;
-  padding: 40px;
-}
-h1 {
-  color: #b388ff;
-}
-h2 {
-  margin-top: 30px;
-  color: #d1b3ff;
-}
-a {
-  color: #8ecaff;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-.section {
-  background: #1c1c1c;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
+    /* Estilos Gerais */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #0f0f12;
+        color: #eee;
+        padding: 40px 20px;
+        margin: 0;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        color: #b388ff;
+        text-align: center;
+        margin-bottom: 40px;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        color: #d1b3ff;
+        border-bottom: 1px solid #333;
+        padding-bottom: 10px;
+        margin-top: 40px;
+        font-weight: 400;
+    }
+
+    /* Estilos da Lista e Links */
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        background: #1c1c22;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        border: 1px solid #2a2a35;
+        /* Preparação para a animação de hover */
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        /* Aplicação da animação de entrada */
+        animation: fadeInUp 0.6s ease-out forwards;
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    /* Efeito ao passar o mouse (Hover) */
+    li:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 15px rgba(179, 136, 255, 0.15);
+        background: #23232a;
+    }
+
+    a {
+        color: #8ecaff;
+        text-decoration: none;
+        display: block; /* Faz o link ocupar toda a área do item */
+        padding: 16px 20px;
+        font-weight: 500;
+    }
+
+    /* Estilo para a caixa de instruções */
+    .instructions {
+        background: #251d35;
+        border-left: 4px solid #b388ff;
+        padding: 20px;
+        border-radius: 4px;
+        margin-top: 40px;
+        line-height: 1.6;
+        animation: fadeInUp 0.8s ease-out forwards;
+        opacity: 0;
+    }
+
+    .instructions-title {
+        color: #b388ff;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    /* Animação Keyframes (Surge de baixo para cima) */
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Atraso sequencial para criar um efeito de cascata nas listas */
+    li:nth-child(1) { animation-delay: 0.1s; }
+    li:nth-child(2) { animation-delay: 0.15s; }
+    li:nth-child(3) { animation-delay: 0.2s; }
+    li:nth-child(4) { animation-delay: 0.25s; }
+    li:nth-child(5) { animation-delay: 0.3s; }
+    li:nth-child(6) { animation-delay: 0.35s; }
+    li:nth-child(n+7) { animation-delay: 0.4s; }
 </style>
 </head>
 
 <body>
 
-<h1>Mídias do Funil - Mounjax</h1>
+<div class="container">
+    <h1>Mídias do Funil - Mounjax</h1>
 
-<div class="section">
-<h2>🎧 Áudios</h2>
-<ul>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE-00-SAUDACAO-2.0.opus">Parte 00 - Saudação</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2001%20-%20SONDAGEM.opus">Parte 01 - Sondagem</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2002%20bariatrica.opus">Parte 02 - Bariátrica</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2002%20fez-de-tudo.opus">Parte 02 - Fez de tudo</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2002%20nunca-fez-nd.opus">Parte 02 - Nunca fez nada</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2002%20nutri.opus">Parte 02 - Nutri</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2002%20resposta-dieta-por-conta.opus">Resposta dieta por conta</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2002%20resposta-emagrecedores.opus">Resposta emagrecedores</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2002%20resposta-menopausa.opus">Resposta menopausa</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2002%20resposta-remedio.opus">Resposta remédio</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2003%20-%20DOR.opus">Parte 03 - Dor</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2004%20-%20APRESENTACAO1.opus">Apresentação 1</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2004%20-%20APRESENTACAO2.opus">Apresentação 2</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE-5-PROVAS-BONUS-1.opus">Provas bônus 1</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE-5-PROVAS-BONUS-2.opus">Provas bônus 2</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE-6-COLATERAL-MODO-DE-USO-1.opus">Modo de uso 1</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE-6-COLATERAL-MODO-DE-USO-2.opus">Modo de uso 2</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/Valores01%20(1).opus">Valores 01</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/Valores02%20(1).opus">Valores 02</a></li>
-</ul>
-</div>
+    <div class="section">
+        <h2>Áudios</h2>
+        <ul>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE-00-SAUDACAO-2.0.opus" target="_blank">Parte 00 - Saudação</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2001%20-%20SONDAGEM.opus" target="_blank">Parte 01 - Sondagem</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2002%20bariatrica.opus" target="_blank">Parte 02 - Bariátrica</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2002%20fez-de-tudo.opus" target="_blank">Parte 02 - Fez de tudo</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2002%20nunca-fez-nd.opus" target="_blank">Parte 02 - Nunca fez nada</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2002%20nutri.opus" target="_blank">Parte 02 - Nutri</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2002%20resposta-dieta-por-conta.opus" target="_blank">Resposta dieta por conta</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2002%20resposta-emagrecedores.opus" target="_blank">Resposta emagrecedores</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2002%20resposta-menopausa.opus" target="_blank">Resposta menopausa</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2002%20resposta-remedio.opus" target="_blank">Resposta remédio</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2003%20-%20DOR.opus" target="_blank">Parte 03 - Dor</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2004%20-%20APRESENTACAO1.opus" target="_blank">Apresentação 1</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE%2004%20-%20APRESENTACAO2.opus" target="_blank">Apresentação 2</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE-5-PROVAS-BONUS-1.opus" target="_blank">Provas bônus 1</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE-5-PROVAS-BONUS-2.opus" target="_blank">Provas bônus 2</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE-6-COLATERAL-MODO-DE-USO-1.opus" target="_blank">Modo de uso 1</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/PARTE-6-COLATERAL-MODO-DE-USO-2.opus" target="_blank">Modo de uso 2</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/Valores01%20(1).opus" target="_blank">Valores 01</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/Valores02%20(1).opus" target="_blank">Valores 02</a></li>
+        </ul>
+    </div>
 
-<div class="section">
-<h2>🎥 Vídeos</h2>
-<ul>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/Depoimento-tamires%20(1).mp4">Depoimento Tamires</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/depoimento-funil-antonia%20(1).mp4">Depoimento Antônia</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/depoimento-funil-gabi-2_ViWCrfJO.mp4">Depoimento Gabi</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/depoimento-lucimari-2_CTk2sLiM.mp4">Depoimento Lucimari</a></li>
-</ul>
-</div>
+    <div class="section">
+        <h2>Vídeos</h2>
+        <ul>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/Depoimento-tamires%20(1).mp4" target="_blank">Depoimento Tamires</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/depoimento-funil-antonia%20(1).mp4" target="_blank">Depoimento Antônia</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/depoimento-funil-gabi-2_ViWCrfJO.mp4" target="_blank">Depoimento Gabi</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/depoimento-lucimari-2_CTk2sLiM.mp4" target="_blank">Depoimento Lucimari</a></li>
+        </ul>
+    </div>
 
-<div class="section">
-<h2>🖼 Imagens</h2>
-<ul>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/formulacao-mounjax-whats%20(1).jpg">Formulação</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/foto-mounjax-whatspp.png"</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/img-whats-payafter.png">Pay After</a></li>
-<li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/pote%20(2).jpeg">Pote</a></li>
+    <div class="section">
+        <h2>Imagens</h2>
+        <ul>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/formulacao-mounjax-whats%20(1).jpg" target="_blank">Formulação</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/foto-mounjax-whatspp.png" target="_blank">Mounjax</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/img-whats-payafter.png" target="_blank">Pay After</a></li>
+            <li><a href="https://cdn.jsdelivr.net/gh/SIGOFARMA/Funil-Mounjax/pote%20(2).jpeg" target="_blank">Pote</a></li>
+        </ul>
+    </div>
 
-PARTE 00 - IMAGEM DO PAY AFTER + ÁUDIO <br>
-PARTE 02 NÃO COLOCAR <br>
-PARTE 04 ÁUDIO 01 + IMG POTE + IMG FORMULAÇÃO + 2 ÁUDIO <br>
-PARTE 05 ÁUDIO 01 + 4 VÍDEOS + ÁUIDO 02 
-DEMAIS PARTES SÓ ÁDUIO.
-
-</ul>
+    <div class="instructions">
+        <div class="instructions-title">Regras de Montagem do Funil:</div>
+        <strong>PARTE 00</strong> - IMAGEM DO PAY AFTER + ÁUDIO <br>
+        <strong>PARTE 02</strong> - NÃO COLOCAR <br>
+        <strong>PARTE 04</strong> - ÁUDIO 01 + IMG POTE + IMG FORMULAÇÃO + 2 ÁUDIO <br>
+        <strong>PARTE 05</strong> - ÁUDIO 01 + 4 VÍDEOS + ÁUDIO 02 <br>
+        <em>DEMAIS PARTES SÓ ÁUDIO.</em>
+    </div>
 </div>
 
 </body>
